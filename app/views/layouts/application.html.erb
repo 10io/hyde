@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%= render 'shared/flash_messages' if !flash.empty? %>
+
 <%= yield %>
 
 </body>

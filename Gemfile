@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 ruby "2.1.2"
 
-
-
 gem 'rails', '4.1.4'
 gem 'haml-rails'
 gem 'sass-rails', '~> 4.0.3'
@@ -13,6 +11,7 @@ gem "figaro"
 gem "octokit"
 gem "oj"
 gem "rest_client"
+gem 'request_store'
 
 
 group :development do

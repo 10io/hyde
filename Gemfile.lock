@@ -94,6 +94,7 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
+    request_store (1.0.8)
     rest_client (1.7.3)
       netrc (~> 0.7.7)
     sass (3.2.19)
@@ -141,6 +142,7 @@ DEPENDENCIES
   oj
   pry
   rails (= 4.1.4)
+  request_store
   rest_client
   sass-rails (~> 4.0.3)
   spring

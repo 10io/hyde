@@ -3,4 +3,9 @@ class ApplicationController < ActionController::Base
 
   def index
   end
+
+  def logout
+    session[:access_token] = nil
+    redirect_to root_url
+  end
 end

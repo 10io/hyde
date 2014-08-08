@@ -8,5 +8,7 @@ class GithubController < ApplicationController
                     },
                     :accept => :json)
     session[:access_token] = JSON.parse(response)['access_token']
+
+    redirect_to repositories_url
   end
 end
