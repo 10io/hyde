@@ -25,3 +25,4 @@ This is WIP
 * Find a simple js editor which translates content to md
 * Support in place image uploading
 * (Support browsing uploaded images)
+* Have a look at https://www.aviary.com/
