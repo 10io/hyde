@@ -9,8 +9,12 @@ gem "coffee-rails"
 
 gem "jquery-rails"
 gem "turbolinks"
+gem "octokit"
+gem "oj"
+gem "rest-client"
 
 group :development, :test do
   gem "web-console"
   gem "spring"
+  gem "pry"
 end

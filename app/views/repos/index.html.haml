@@ -1,0 +1,3 @@
+%ul
+- @repos.each do |repo|
+  %li= link_to(repo.full_name, repo_path(repo.name))

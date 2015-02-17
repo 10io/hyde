@@ -3,4 +3,10 @@ class ApplicationController < ActionController::Base
 
   def welcome
   end
+
+  private
+
+  def current_client
+    @current_client ||= Octokit::Client.new(:access_token => session[:access_token])
+  end
 end
