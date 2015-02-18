@@ -1,3 +1,5 @@
+%h3 Repos deployed on Github pages
+
 %ul
-- @repos.each do |repo|
-  %li= link_to(repo.full_name, repo_path(repo.name))
+  - @repos.select(&:github_pageable?).each do |repo|
+    %li= link_to(repo.full_name, repo_path(repo.name))

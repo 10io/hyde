@@ -12,6 +12,7 @@ gem "turbolinks"
 gem "octokit"
 gem "oj"
 gem "rest-client"
+gem "request_store"
 
 group :development, :test do
   gem "web-console"
