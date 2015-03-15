@@ -1,5 +1,5 @@
 class GithubController < ApplicationController
-  def callback
+  def handshake
     return head :unauthorized unless github_params[:state] == session.id
     json = Oj.load(RestClient.post(github_access_token_url, {}, "Accept" => "application/json"), :symbol_keys => true)
     session[:access_token] = json[:access_token]

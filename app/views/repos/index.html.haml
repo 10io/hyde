@@ -2,4 +2,4 @@
 
 %ul
   - @repos.select(&:github_pageable?).each do |repo|
-    %li= link_to(repo.full_name, repo_path(repo.name))
+    %li= link_to(repo.full_name, "/repos/#{repo.full_name}/tree/master")

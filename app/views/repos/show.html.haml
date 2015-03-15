@@ -1,0 +1,19 @@
+%h3= #{params[:repo_name]}
+
+%h4= link_to("config file", "/repos/#{params[:org]}/#{params[:repo_name]}/tree/#{params[:branch]}/_config.yml")
+
+- unless @posts.empty?
+  %h4 Posts
+  %ul
+    - @posts.each do |post|
+      %li
+        %span{ :class => "glyphicon #{post.directory? ? "glyphicon-folder-open" : "glyphicon-file"}", "aria-hidden" => "true" }
+        = link_to(post.name, "/repos/#{params[:org]}/#{params[:repo_name]}/tree/#{params[:branch]}/posts/#{page.name}")
+
+- unless @pages.empty?
+  %h4 Pages
+  %ul
+    - @pages.each do |page|
+      %li
+        %span{ :class => "glyphicon #{page.directory? ? "glyphicon-folder-open" : "glyphicon-file"}", "aria-hidden" => "true" }
+        = link_to(page.name, "/repos/#{params[:org]}/#{params[:repo_name]}/tree/#{params[:branch]}/pages/#{page.name}")
